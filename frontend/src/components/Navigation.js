@@ -8,7 +8,7 @@ export default class Navigation extends Component {
                 <div className="container">
                     <Link className="navbar-brand" to="/">
                         <i className="material-icons">
-                            assignment </i> NotesApp
+                            assignment </i> Super mercado
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -16,13 +16,10 @@ export default class Navigation extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item active">
-                                <Link to="/" className="nav-link">Notes</Link>
+                                <Link to="/" className="nav-link">Products</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/create" className="nav-link">Create Note</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/user" className="nav-link">Create User</Link>
+                                <Link to="/create" className="nav-link">Create Product</Link>
                             </li>
                         </ul>
                     </div>

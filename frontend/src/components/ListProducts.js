@@ -3,7 +3,7 @@ import axios from 'axios'
 import { format } from 'timeago.js'
 import { Link } from 'react-router-dom'
 
-export default class NotesList extends Component {
+export default class ListProducts extends Component {
 
     state = {
         notes: []
@@ -44,7 +44,10 @@ export default class NotesList extends Component {
                                         {note.price}
                                     </p>
                                     <p>
-                                        Author: {note.name}
+                                        Product: {note.name}
+                                    </p>
+                                    <p>
+                                        Expiration date: {note.expiration_date}
                                     </p>
                                 </div>
                                 <div className="card-footer">
