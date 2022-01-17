@@ -1,15 +1,17 @@
-FROM node:latest
+FROM node:16-alpine3.14
 
-MAINTAINER Abhishek Modi 
+WORKDIR /App
 
-RUN echo "Tryin to build my first application"
+COPY . ./
 
-COPY . /var/www
+ENV PATH /app/node_modules/.bin:$PATH
 
-WORKDIR /var/www
 
-RUN npm install
-
-EXPOSE 3000
-
-ENTRYPOINT ["npm","start"]
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install axios --silent
+CMD ["npm", "run" ,"start"]
+ EXPOSE 31000
