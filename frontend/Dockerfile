@@ -14,4 +14,4 @@ RUN npm install react --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 RUN npm install axios --silent
 CMD ["npm", "run" ,"start"]
- EXPOSE 31000
+EXPOSE 3000
