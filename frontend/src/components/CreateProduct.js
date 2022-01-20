@@ -30,7 +30,7 @@ export default class CreateProduct extends Component {
     }
     onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:8082/product', {
+        await axios.post('http://137.184.109.235:8082/product', {
             name: this.state.name,
             category: this.state.category,
             expiration_date: this.state.expiration_date,

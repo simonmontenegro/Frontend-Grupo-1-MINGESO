@@ -14,14 +14,14 @@ export default class ListProducts extends Component {
     }
 
     getNotes = async () => {
-        const res = await axios.get('http://localhost:8082/allproducts')
+        const res = await axios.get('http://137.184.109.235:8082/allproducts')
         this.setState({
             notes: res.data
         });
     }
 
     deleteNote = async (noteId) => {
-        await axios.delete('http://localhost:8082/deleteproduct/' + noteId);
+        await axios.delete('http://137.184.109.235:8082/deleteproduct/' + noteId);
         this.getNotes();
     }
 
@@ -34,10 +34,7 @@ export default class ListProducts extends Component {
                             <div className="card">
                                 <div className="card-header d-flex justify-content-between">
                                     <h5>{note.title}</h5>
-                                    <Link to={"/edit/" + note._id} className="btn btn-secondary">
-                                        <i className="material-icons">
-                                            border_color</i>
-                                    </Link>
+                                    
                                 </div>
                                 <div className="card-body">
                                     <p>
